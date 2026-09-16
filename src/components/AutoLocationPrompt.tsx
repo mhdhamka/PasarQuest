@@ -32,11 +32,6 @@ export const AutoLocationPrompt: React.FC<AutoLocationPromptProps> = ({
               <div className="flex items-start sm:items-center gap-3">
                 <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-500/40 bg-emerald-500/15 text-emerald-400">
                   <Compass className={`h-5 w-5 ${isLocating ? 'animate-spin' : ''}`} />
-                  {/* Subtle radar ping effect */}
-                  <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                  </span>
                 </div>
 
                 <div className="space-y-0.5">

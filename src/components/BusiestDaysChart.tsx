@@ -388,7 +388,7 @@ export const BusiestDaysChart: React.FC<BusiestDaysChartProps> = ({
                             </div>
                           )}
                           <p className="text-[10px] text-emerald-400/80 pt-1 italic">
-                            💡 Click bar to filter market list to this day
+                            Click bar to filter market list to this day
                           </p>
                         </div>
                       </div>

@@ -9,7 +9,6 @@
 ![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-Bundler-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Leaflet](https://img.shields.io/badge/Leaflet-Maps-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 ![Web Audio API](https://img.shields.io/badge/Web_Audio_API-Sound_FX-FF6F00?style=for-the-badge&logo=soundcharts&logoColor=white)
@@ -115,13 +114,8 @@ npm run start
 ## Project Architecture
 
 ```text
-pasar-quest/
+PasarQuest/
 ├── public/                # Public assets & PWA manifest icons
-│   ├── icon.svg                     # Vector brand logo
-│   ├── pwa-192x192.png              # Android standard launcher icon
-│   ├── pwa-512x512.png              # High-resolution splash icon
-│   ├── pwa-maskable-512x512.png     # Android adaptive maskable icon
-│   └── apple-touch-icon.png         # iOS Safari home screen touch icon
 ├── scripts/
 │   └── generate-icons.js  # Automated PNG icon generation script
 ├── src/
@@ -154,7 +148,6 @@ pasar-quest/
 │   ├── index.css                    # Tailwind CSS global styles
 │   ├── main.tsx                     # React 19 application entry point
 │   └── types.ts                     # Shared TypeScript interfaces & types
-├── metadata.json          # Application platform metadata
 ├── index.html             # HTML entry point with PWA meta & viewport tags
 ├── package.json           # Dependencies and build scripts
 ├── server.ts              # Express backend server with Vite middleware

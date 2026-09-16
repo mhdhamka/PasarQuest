@@ -4,7 +4,7 @@
 
 > Crowdsourced Malaysian Night Market Directory & Gamified Foodie Dex
 
-[Documentation](https://github.com/mhdhamka/PasarQuest) · [Live Demo](https://ais-pre-qdduiewlvohkvzam4dwwu2-469594656936.asia-east1.run.app) · [Report Bug](https://github.com/mhdhamka/PasarQuest/issues) · [Request Feature](https://github.com/mhdhamka/PasarQuest/issues)
+[Explore the Project](./docs/documentation.md) · [Live Demo](https://ais-pre-qdduiewlvohkvzam4dwwu2-469594656936.asia-east1.run.app) · [Report Bug](https://github.com/mhdhamka/PasarQuest/issues) · [Request Feature](https://github.com/mhdhamka/PasarQuest/issues)
 
 ![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)

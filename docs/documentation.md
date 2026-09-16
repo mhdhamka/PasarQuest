@@ -91,7 +91,7 @@ npm run start
 
 ---
 
-## Project Architecture
+## Project Structure
 
 ```text
 PasarQuest/

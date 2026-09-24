@@ -14,7 +14,7 @@ export default defineConfig(() => {
         includeAssets: ['apple-touch-icon.png', 'icon.svg'],
         manifest: {
           id: '/',
-          name: 'Pasar Quest',
+          name: 'PasarQuest',
           short_name: 'PasarQuest',
           description: 'Crowdsourced Malaysian night market directory, live schedules, interactive map, and gamified Pasar Dex foodie passport.',
           theme_color: '#09090b',

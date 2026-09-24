@@ -35,6 +35,7 @@ export const MarketMap: React.FC<MarketMapProps> = ({
   const mapInstanceRef = useRef<L.Map | null>(null);
   const markersLayerRef = useRef<L.LayerGroup | null>(null);
   const userMarkerRef = useRef<L.Marker | null>(null);
+  const hasCenteredOnUser = useRef(false);
 
   // Initialize Map
   useEffect(() => {
@@ -117,6 +118,22 @@ export const MarketMap: React.FC<MarketMapProps> = ({
     }
   }, [userLocation]);
 
+  // Auto-center map on user location once upon initial fetch
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    if (!map || !userLocation || hasCenteredOnUser.current) return;
+
+    const lat = Number(userLocation.lat);
+    const lng = Number(userLocation.lng);
+
+    if (Number.isFinite(lat) && Number.isFinite(lng)) {
+      map.flyTo([lat, lng], 13, {
+        duration: 1.2,
+      });
+      hasCenteredOnUser.current = true;
+    }
+  }, [userLocation]);
+
   // Update market markers
   useEffect(() => {
     const map = mapInstanceRef.current;
@@ -189,8 +206,8 @@ export const MarketMap: React.FC<MarketMapProps> = ({
 
       const travelBadge = travelEstimate
         ? travelMode === 'walking'
-          ? `<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700">🚶 ${travelEstimate.formattedWalkingDuration} <span class="text-neutral-500">•</span> <span class="text-neutral-400">${travelEstimate.formattedWalkingDistance}</span></span>`
-          : `<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700">🚗 ${travelEstimate.formattedDrivingDuration} <span class="text-neutral-500">•</span> <span class="text-neutral-400">${travelEstimate.formattedDrivingDistance}</span></span>`
+          ? `<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700"> ${travelEstimate.formattedWalkingDuration} <span class="text-neutral-500">•</span> <span class="text-neutral-400">${travelEstimate.formattedWalkingDistance}</span></span>`
+          : `<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 bg-neutral-800 px-1.5 py-0.5 rounded border border-neutral-700"> ${travelEstimate.formattedDrivingDuration} <span class="text-neutral-500">•</span> <span class="text-neutral-400">${travelEstimate.formattedDrivingDistance}</span></span>`
         : '';
 
       const popupContent = document.createElement('div');

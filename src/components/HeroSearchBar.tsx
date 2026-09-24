@@ -74,7 +74,7 @@ export const HeroSearchBar: React.FC<HeroSearchBarProps> = ({
               type="text"
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              placeholder="Search night market by name, district, or street food (e.g. TTDI, Apam Balik)..."
+              placeholder="Search night market by name, district, or street food ..."
               className="w-full rounded-xl border border-neutral-700/80 bg-neutral-950/80 py-3 pl-10 pr-9 text-sm text-neutral-100 placeholder-neutral-500 shadow-inner outline-none transition focus:border-emerald-500/80 focus:ring-2 focus:ring-emerald-500/20"
             />
             {searchQuery && (

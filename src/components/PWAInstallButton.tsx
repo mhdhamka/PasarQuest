@@ -19,7 +19,7 @@ export const PWAInstallButton: React.FC = () => {
         type="button"
         onClick={install}
         className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-500/50 bg-emerald-500/15 hover:bg-emerald-500/25 px-2.5 py-1.5 text-xs font-bold text-emerald-300 transition shadow-sm hover:border-emerald-400"
-        title="Install Pasar Quest as Mobile / Desktop App"
+        title="Install PasarQuest as Mobile / Desktop App"
       >
         <Download className="h-3.5 w-3.5 text-emerald-400" />
         <span className="hidden xs:inline">Install App</span>
@@ -37,7 +37,7 @@ export const PWAInstallButton: React.FC = () => {
           type="button"
           onClick={() => setShowIOSGuide(true)}
           className="inline-flex items-center gap-1.5 rounded-xl border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 px-2.5 py-1.5 text-xs font-bold text-amber-300 transition shadow-sm"
-          title="Add Pasar Quest to your iPhone / iPad Home Screen"
+          title="Add PasarQuest to your iPhone / iPad Home Screen"
         >
           <Smartphone className="h-3.5 w-3.5 text-amber-400" />
           <span className="hidden xs:inline">Install on iOS</span>
@@ -83,7 +83,7 @@ export const PWAInstallButton: React.FC = () => {
                 </div>
 
                 <div className="text-[11px] text-neutral-400 text-center">
-                  Pasar Quest will launch as a full-screen, standalone app with instant access and saved stamps!
+                  PasarQuest will launch as a full-screen, standalone app with instant access and saved stamps!
                 </div>
               </div>
 
@@ -108,10 +108,10 @@ export const PWAInstallButton: React.FC = () => {
       type="button"
       onClick={() => {
         // If browser hasn't fired prompt yet, provide friendly instruction modal or alert
-        alert('To install Pasar Quest as an app on your device:\n\n• On Chrome / Edge: Click the install icon in the address bar.\n• On Android: Tap menu (⋮) and choose "Install app" or "Add to Home screen".\n• On iPhone: Tap Share and choose "Add to Home Screen".');
+        alert('To install PasarQuest as an app on your device:\n\n• On Chrome / Edge: Click the install icon in the address bar.\n• On Android: Tap menu (⋮) and choose "Install app" or "Add to Home screen".\n• On iPhone: Tap Share and choose "Add to Home Screen".');
       }}
       className="hidden sm:inline-flex items-center gap-1.5 rounded-xl border border-neutral-800 bg-neutral-900 hover:bg-neutral-800 px-2.5 py-1.5 text-xs font-semibold text-neutral-300 transition"
-      title="Install Pasar Quest as an App"
+      title="Install PasarQuest as an App"
     >
       <Download className="h-3.5 w-3.5 text-neutral-400" />
       <span>Install App</span>

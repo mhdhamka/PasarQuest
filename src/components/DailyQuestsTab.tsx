@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Target, Clock, CheckCircle2, Flame, Gift, Sparkles } from 'lucide-react';
+import { Target, Clock, CheckCircle2, Flame, Gift } from 'lucide-react';
 import { MarketCheckIn, DailyQuest } from '../types';
 import {
   computeDailyQuests,
@@ -55,7 +55,6 @@ export const DailyQuestsTab: React.FC<DailyQuestsTabProps> = ({
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/20 px-3 py-0.5 text-xs font-bold text-amber-300 border border-amber-500/30">
-              <Sparkles className="h-3.5 w-3.5" />
               Daily Street Food Missions
             </div>
             <h3 className="font-display text-lg font-black text-white">

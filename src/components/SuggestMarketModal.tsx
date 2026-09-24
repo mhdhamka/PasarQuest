@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, PlusCircle, Check } from 'lucide-react';
+import { X, Check } from 'lucide-react';
 import { Market, DayCode } from '../types';
 import { MALAYSIAN_STATES, DAY_NAMES, DAY_CODES } from '../utils/constants';
 import { saveUserMarket } from '../utils/storage';
@@ -18,8 +18,8 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
   if (!isOpen) return null;
 
   const [name, setName] = useState('');
-  const [state, setState] = useState('Selangor');
-  const [district, setDistrict] = useState('');
+  const [state, setState] = useState('Sarawak');
+  const [district, setDistrict] = useState('Kuching');
   const [address, setAddress] = useState('');
   const [selectedDays, setSelectedDays] = useState<DayCode[]>(['sat']);
   const [startTime, setStartTime] = useState('17:00');
@@ -28,7 +28,7 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
   const [hasAccessibleParking, setHasAccessibleParking] = useState(false);
   const [hasToilet, setHasToilet] = useState(false);
   const [hasSurau, setHasSurau] = useState(true);
-  const [foods, setFoods] = useState('Apam Balik, Ayam Gunting, Roti John, Air Balang');
+  const [foods, setFoods] = useState('Kueh Chap, Mee Kolok, Ayam Pansuh, Apam Balik');
   const [totalShop, setTotalShop] = useState(50);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -66,12 +66,12 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
       Labuan: { lat: 5.2831, lng: 115.2308 },
     };
 
-    const baseCoords = stateCoords[state] || { lat: 3.139, lng: 101.6869 };
+    const baseCoords = stateCoords[state] || { lat: 1.5533, lng: 110.3592 };
     // slight random offset so markers don't overlap exactly
     const calculatedLat = baseCoords.lat + (Math.random() - 0.5) * 0.05;
     const calculatedLng = baseCoords.lng + (Math.random() - 0.5) * 0.05;
-    const lat = Number.isFinite(calculatedLat) ? Number(calculatedLat.toFixed(6)) : 3.139;
-    const lng = Number.isFinite(calculatedLng) ? Number(calculatedLng.toFixed(6)) : 101.6869;
+    const lat = Number.isFinite(calculatedLat) ? Number(calculatedLat.toFixed(6)) : 1.5533;
+    const lng = Number.isFinite(calculatedLng) ? Number(calculatedLng.toFixed(6)) : 110.3592;
 
     const newMarket: Market = {
       id: `user-${Date.now()}-${name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`,
@@ -129,14 +129,11 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-neutral-800 bg-neutral-900 px-5 py-4 sm:px-6">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
-              <PlusCircle className="h-5 w-5" />
-            </div>
             <div>
               <h3 className="font-display text-base sm:text-lg font-bold text-white">
                 Suggest a Night Market
               </h3>
-              <p className="text-xs text-neutral-400">Add a local Pasar Malam to your community directory</p>
+              <p className="text-xs text-neutral-400">Add a local Night Market to your community directory</p>
             </div>
           </div>
           <button
@@ -170,7 +167,7 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
                   id="input-suggest-name"
                   type="text"
                   required
-                  placeholder="e.g. Pasar Malam Seksyen 7 Shah Alam"
+                  placeholder="e.g. Medan Niaga Satok"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2 text-sm text-neutral-100 outline-none focus:border-emerald-500"
@@ -204,7 +201,7 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
                   <input
                     id="input-suggest-district"
                     type="text"
-                    placeholder="e.g. Shah Alam / Petaling"
+                    placeholder="e.g. Kuching"
                     value={district}
                     onChange={(e) => setDistrict(e.target.value)}
                     className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2 text-sm text-neutral-100 outline-none focus:border-emerald-500"
@@ -220,7 +217,7 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
                 <input
                   id="input-suggest-address"
                   type="text"
-                  placeholder="e.g. Jalan Plumbum 7/95, Seksyen 7, 40000 Shah Alam"
+                  placeholder="e.g. Jalan Satok, 93000 Kuching, Sarawak"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2 text-sm text-neutral-100 outline-none focus:border-emerald-500"
@@ -335,7 +332,7 @@ export const SuggestMarketModal: React.FC<SuggestMarketModalProps> = ({
                   type="text"
                   value={foods}
                   onChange={(e) => setFoods(e.target.value)}
-                  placeholder="Apam Balik, Satay, Roti John, Char Kuey Teow"
+                  placeholder="Kueh Chap, Mee Kolok, Ayam Pansuh, Apam Balik"
                   className="w-full rounded-xl border border-neutral-800 bg-neutral-900 px-3.5 py-2 text-sm text-neutral-100 outline-none focus:border-emerald-500"
                 />
               </div>

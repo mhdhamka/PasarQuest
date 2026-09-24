@@ -635,8 +635,8 @@ export default function App() {
             <span className="hidden sm:inline text-[11px] text-neutral-400">
               {filters.sortBy === 'distance' && userLocation
                 ? filters.travelMode === 'walking'
-                  ? 'Nearest Walking Time & Footpath Distance 🚶'
-                  : 'Nearest Driving Time & Road Distance 🚗'
+                  ? 'Nearest Walking Time & Footpath Distance'
+                  : 'Nearest Driving Time & Road Distance'
                 : filters.sortBy === 'rating'
                 ? 'Highest Community Rating ⭐'
                 : filters.sortBy === 'shops'
@@ -782,13 +782,22 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-neutral-800/80 bg-neutral-950 py-6 text-center text-xs text-neutral-500">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-1.5">
-          <p className="font-medium text-neutral-400">
-            Night Market • Built for local food lovers & night market community
+      <footer className="border-t border-neutral-800 bg-neutral-950 py-8 text-xs text-center">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 space-y-2">
+          <div className="flex items-center justify-center gap-2">
+            <span className="font-bold text-neutral-100 text-sm">PasarQuest</span>
+            <span className="bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">
+              v1.0.0
+            </span>
+          </div>
+          <p className="text-xs text-neutral-300 font-medium">
+            Malaysian Night Market Directory & Foodie Quest • Built for local food lovers & night market community
           </p>
-          <p className="text-[11px] text-neutral-600">
+          <p className="text-[11px] text-neutral-400 max-w-lg mx-auto leading-relaxed">
             Operating schedules and real-time statuses are subject to local authority (PBT) and vendor management.
+          </p>
+          <p className="text-[10px] text-neutral-500 font-mono pt-1">
+            © 2026 PasarQuest. All rights reserved.
           </p>
         </div>
       </footer>
@@ -843,7 +852,7 @@ export default function App() {
                 )}
                 {dailyQuestsSummary.readyToClaim > 0 && (
                   <span className="flex items-center gap-0.5 rounded-full bg-amber-400 px-1.5 py-0.2 text-[9px] font-black text-neutral-950 shadow-xs animate-bounce">
-                    🎯 {dailyQuestsSummary.readyToClaim}
+                    {dailyQuestsSummary.readyToClaim}
                   </span>
                 )}
               </div>

@@ -1,6 +1,6 @@
 <div align="center">
 
-# Pasar Quest  
+# PasarQuest  
 
 > Crowdsourced Malaysian Night Market Directory & Gamified Foodie Dex
 
@@ -42,6 +42,6 @@ Feel free to learn from, fork, and improve upon this project.
 
 If you found this project interesting, consider giving it a star!
 
-Made with ❤️ by mdhamka
+Developed & Maintained by mdhamka
 
 </div>

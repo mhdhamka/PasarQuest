@@ -2,9 +2,9 @@
 
 A community-driven, interactive full-stack web application designed to help Malaysians and travelers discover, track, and explore authentic night markets (*pasar malam*) across every state and federal territory in Malaysia.
 
-Finding which pasar malam is operating today, its exact stall hours, parking accessibility, and prayer facilities is often difficult or scattered across disparate local social media groups. **Pasar Quest** solves this by uniting real-time operating schedules, interactive Leaflet geo-mapping, crowdsourced community stall submissions, and a gamified **Pasar Dex & Foodie Passport** with daily quests and check-in streaks.
+Finding which pasar malam is operating today, its exact stall hours, parking accessibility, and prayer facilities is often difficult or scattered across disparate local social media groups. **PasarQuest** solves this by uniting real-time operating schedules, interactive Leaflet geo-mapping, crowdsourced community stall submissions, and a gamified **Pasar Dex & Foodie Passport** with daily quests and check-in streaks.
 
-Built with modern Progressive Web App (PWA) standards, **Pasar Quest** runs identically as a responsive web dashboard on desktop browsers and as an installable, standalone mobile application on iOS and Android smartphones.
+Built with modern Progressive Web App (PWA) standards, **PasarQuest** runs identically as a responsive web dashboard on desktop browsers and as an installable, standalone mobile application on iOS and Android smartphones.
 
 ---
 
@@ -37,7 +37,7 @@ Built with modern Progressive Web App (PWA) standards, **Pasar Quest** runs iden
 2. **iPhone & iPad (Safari):**
    - Tap the **Share** button on Safari's bottom toolbar.
    - Scroll down and choose **Add to Home Screen**.
-   - Launch Pasar Quest from your home screen as a standalone, distraction-free application without browser bars.
+   - Launch PasarQuest from your home screen as a standalone, distraction-free application without browser bars.
 
 ---
 
@@ -57,7 +57,7 @@ Built with modern Progressive Web App (PWA) standards, **Pasar Quest** runs iden
 
 ## Getting Started Locally
 
-To run the complete Pasar Quest stack locally, follow these simple steps:
+To run the complete PasarQuest stack locally, follow these simple steps:
 
 ### 1. Prerequisites
 - **Node.js**: v18.0.0 or later

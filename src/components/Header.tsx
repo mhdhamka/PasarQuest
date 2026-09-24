@@ -76,10 +76,10 @@ export const Header: React.FC<HeaderProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <h1 className="font-display text-lg font-bold tracking-tight text-white sm:text-xl flex items-center gap-2">
-                Pasar Quest
+                PasarQuest
               </h1>
               <span className="hidden items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 ring-1 ring-emerald-500/30 sm:inline-flex">
-                v2.0.0
+                v1.0.0
               </span>
             </div>
             <p className="hidden text-xs text-neutral-400 sm:block">

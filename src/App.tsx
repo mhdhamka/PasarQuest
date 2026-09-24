@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Header, XpGainEvent } from './components/Header';
-import { HeroSearchBar } from './components/HeroSearchBar';
+import { SearchBar } from './components/SearchBar';
 import { MarketCard } from './components/MarketCard';
 import { MarketMap } from './components/MarketMap';
 import { MarketDetailModal } from './components/MarketDetailModal';
@@ -555,7 +555,7 @@ export default function App() {
       />
 
       {/* Hero Search, State, Day & Food Cockpit */}
-      <HeroSearchBar
+      <SearchBar
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         filters={filters}

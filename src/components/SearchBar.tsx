@@ -16,7 +16,7 @@ import {
 import { FilterState, ViewMode, UserCoordinates } from '../types';
 import { MALAYSIAN_STATES, POPULAR_FOOD_TAGS, DAY_NAMES, DAY_CODES } from '../utils/constants';
 
-interface HeroSearchBarProps {
+interface SearchBarProps {
   searchQuery: string;
   onSearchChange: (q: string) => void;
   filters: FilterState;
@@ -32,7 +32,7 @@ interface HeroSearchBarProps {
   stateCounts: Record<string, number>;
 }
 
-export const HeroSearchBar: React.FC<HeroSearchBarProps> = ({
+export const SearchBar: React.FC<SearchBarProps> = ({
   searchQuery,
   onSearchChange,
   filters,

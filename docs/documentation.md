@@ -105,7 +105,7 @@ PasarQuest/
 │   │   ├── DailyQuestsTab.tsx       # Interactive daily quests & XP claims
 │   │   ├── FilterDrawer.tsx         # Comprehensive mobile filter drawer
 │   │   ├── Header.tsx               # Brand navigation bar with live MYT clock & PWA install
-│   │   ├── HeroSearchBar.tsx        # Search, state selector & filter cockpit
+│   │   ├── SearchBar.tsx            # Search, state selector & filter cockpit
 │   │   ├── MarketCard.tsx           # Market listing item card
 │   │   ├── MarketDetailModal.tsx    # Full market information & amenities modal
 │   │   ├── MarketMap.tsx            # Leaflet interactive map component
